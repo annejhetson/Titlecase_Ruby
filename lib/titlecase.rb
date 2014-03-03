@@ -1,11 +1,11 @@
 def title_case(sentence)
   split_word = sentence.downcase.split
-  words = ["and", "a", "an", "the", "about", "in", "on", "at", "between", "is", "for"]
+  words_not_capitalized = ["and", "a", "an", "the", "about", "in", "on", "at", "between", "is", "for"]
   final = []
 
   split_word.each do |word|
 
-    if (words.include?(word))
+    if (words_not_capitalized.include?(word))
       final << word.downcase
     else
       final << word.capitalize
